@@ -1,6 +1,7 @@
-#Programa autimatizado para generar las figuras de la familia de filtros Chebyshev tipo II,
+#Programa automatizado para generar las figuras de la familia de filtros Chebyshev tipo II,
 #Los valores de la frecuencia de corte se han determinado de forma concreta, es decir, son validos para un tiempo de covarianza unitario simpre que
-#se cumplan las mallas de integración,las mallas se poueden ajustar para valores muy grandes para integrar ordenes impares
+#se cumplan las mallas de integración,las mallas se poueden ajustar para valores muy grandes para integrar ordenes impares, este programa toma como referencia a "CHEBYSHEV_MANUAL.py"
+#Se automatizado haciendo uso de modelos de AI pero la estrcutura del programa cumple con los calculos de manual, simplemente en esta versión se automatiza para el almacenaamiento de las figuras
 import numpy as np
 from numpy.linalg import inv
 import matplotlib
