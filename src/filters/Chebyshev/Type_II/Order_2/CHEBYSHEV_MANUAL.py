@@ -79,10 +79,9 @@ plt.grid(True)
 plt.legend()
 plt.xlabel("tiempo[seg]")
 plt.ylabel("funcion Básica B(t)")
-#Calculos en la frecuencia 
 ########################################################################
 #Estudio em frecuencia
-#la funcion de densidad espectral sx(w)=4*alfa^3/(alfa^2+w^2)^2     la cual tiene como máximo 4/alfa
+#la funcion de densidad espectral tiene dos casos, los cuales se han definido en una función anterior
 #por lo tanto se define sx(w)
 sx=S_w
 #la función básica en la frecuencia esta dada por
@@ -136,5 +135,5 @@ for j in range(N):
     fig_f.tight_layout()
 #Pruebas
 
-#Plots
+#show
 plt.show()
