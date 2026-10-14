@@ -26,7 +26,7 @@ Los parámetros utilizados deben consultarse directamente en cada script para ga
 |---|---|
 | Orden del filtro | Segundo orden. |
 | Tipo de filtro | Chebyshev tipo II. |
-| \(\varepsilon\) | Parámetro de diseño evaluado según la definición implementada en el programa. |
+| epsilon | Parámetro para definir el rizo en la banda de rechazo|
 | \(\Delta T\) | Intervalo de muestreo. |
 | \(N\) | Número de muestras empleadas en la reconstrucción. |
 | Malla de frecuencias | Intervalo y resolución utilizados para aproximar las integrales espectrales. |
