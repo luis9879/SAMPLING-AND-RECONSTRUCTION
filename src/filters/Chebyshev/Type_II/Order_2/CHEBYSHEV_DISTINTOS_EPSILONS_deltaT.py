@@ -9,6 +9,8 @@
 #y la reducción de la complejidad computacional en el diseño de filtros de Chebyshev tipo II.
 #La referencia y estructura principal del programa se tomo del programa "CHEBYSHEV_MANUAL.py" que se encuentra en el repositorio de GitHub:
 # https://github.com/luis9879/SAMPLING-AND-RECONSTRUCTION/blob/main/src/filters/Chebyshev/Type_II/Order_2/CHEBYSHEV_MANUAL.py
+from cmath import tau
+
 import numpy as np
 from numpy.linalg import inv
 import matplotlib
@@ -151,11 +153,14 @@ def calcular_orden(P, wc, epsilon, TI, t_fam):
     S_w = ChebyshevII_espectro(wc, w0, epsilon, P)
     modo = modo_integracion(P)
     def K_vec(tau):
-        """K_malla(tau) = (1/2pi) integral en la malla finita S(w) cos(w*tau) dw."""
         tau = np.asarray(tau, dtype=float)
-        return (1 / (2 * np.pi)) * np.trapezoid(
-            S_w[None, :] * np.cos(np.outer(tau.ravel(), w0)), x=w0, axis=1
-        ).reshape(tau.shape)
+        integral = np.trapezoid(
+            S_w[None, :] * np.cos(np.outer(tau.ravel(), w0)),
+            x=w0,
+            axis=1,
+        )
+        integral_0 = np.trapezoid(S_w, x=w0)
+        return (integral / integral_0).reshape(tau.shape)
     # Función de covarianza para graficar (como en el programa de un solo orden)
     K_cov = K_vec(tau_cov)
     # Matriz de covarianza de las muestras y su inversa
