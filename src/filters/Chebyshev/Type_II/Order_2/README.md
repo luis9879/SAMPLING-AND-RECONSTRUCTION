@@ -2,17 +2,7 @@
 ## 1. Descripción
 Este directorio contiene programas para el análisis de un filtro Chebyshev tipo II de segundo orden mediante muestreo y reconstrucción de funciones asociadas a su caracterización estadística.
 Se estudia la influencia de los parámetros del filtro y del intervalo de muestreo sobre la reconstrucción, tanto en el dominio del tiempo como en el dominio de la frecuencia.
-## 2. Fundamento teórico
-Los filtros Chebyshev tipo II, también conocidos como filtros inversos de Chebyshev, presentan una respuesta con banda de paso monótona y ondulaciones en la banda de rechazo. Su diseño permite controlar las características espectrales mediante sus parámetros.
-En este proyecto se estudia cómo los parámetros del filtro influyen en las funciones utilizadas para la reconstrucción y en los errores obtenidos al aproximar dichas funciones a partir de sus muestras.
-### 2.1. Muestreo y reconstrucción
-Sea \(B(t)\) una función que se desea reconstruir a partir de sus muestras, tomadas en instantes uniformemente espaciados:
-\[
-t_k=k\Delta T.
-\]
-Aquí, \(\Delta T\) representa el intervalo de muestreo y \(k\) es el índice de la muestra.
-La reconstrucción se obtiene mediante una combinación de funciones básicas ponderadas por los valores muestreados. Su precisión depende del intervalo de muestreo, del número de muestras, de las propiedades espectrales de la función y del procedimiento numérico empleado.
-### 2.2. Análisis en frecuencia
+### 2. Análisis en frecuencia
 El análisis frecuencial permite estudiar la distribución espectral de las funciones básicas y evaluar las diferencias entre la representación original y la reconstruida.
 Las integrales utilizadas para calcular magnitudes espectrales se aproximan numéricamente sobre una malla de frecuencias finita. Por tanto, los resultados dependen tanto de las propiedades del filtro como de la resolución y extensión de dicha malla.
 ## 3. Programas
