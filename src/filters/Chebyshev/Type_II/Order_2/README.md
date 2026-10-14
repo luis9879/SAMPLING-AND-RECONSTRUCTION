@@ -58,7 +58,6 @@ Para reproducir los experimentos:
 4. Confirmar que la malla de integración cubre el intervalo de frecuencias requerido.
 5. Conservar los parámetros de ejecución junto con las gráficas y los resultados obtenidos.
 ## 8. Alcance
-El objetivo es caracterizar la relación entre los parámetros del filtro, el muestreo, la reconstrucción y los errores numéricos obtenidos en los dominios temporal y frecuencial.
-La validez de las conclusiones depende de la formulación matemática implementada, de la configuración experimental y de la convergencia de los procedimientos numéricos.
-Mediante los programos realizados se relacionará con la dependencia estadística a partir de la estructura del filtro y una entrada, como la estrcutura módifica esta pero también la influencia estadística toma 
+El objetivo es caracterizar la relación entre los parámetros del filtro, el muestreo, la reconstrucción y los errores numéricos obtenidos en los dominios temporal y frecuencial con relación al procedimiento de muestreo y reconstrucción mediante la regla de la esperanza matemática condicional (REMC) para filtros lineales de orden n, el análisis dual tiempo-frecuencia.
+Mediante los programas realizados se relacionará con la dependencia estadística a partir de la estructura del filtro y una entrada, como la estrcutura módifica esta pero también la influencia estadística toma 
 ciertas características y con ello formular algoritmos cuasi-óptimos con los errores deseados o como la estructura y laa entrada módifican el error de reconstrucción.
